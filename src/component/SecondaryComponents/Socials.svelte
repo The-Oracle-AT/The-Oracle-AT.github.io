@@ -5,8 +5,12 @@
 </script>
 
 <ul>
-    <li><a href="https://github.com/"><LinkedIn {size}/></a></li>
-    <li><Github {size}/></li>
+    <li><a href="https://www.linkedin.com/in/lapane-maela" target="_blank">
+        <LinkedIn {size}/>
+    </a></li>
+    <li><a href="https://github.com/The-Oracle-AT?tab=repositories" target="_blank">
+        <Github {size}/>
+    </a></li>
 </ul>
 
 <style>

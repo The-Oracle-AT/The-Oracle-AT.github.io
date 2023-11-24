@@ -29,7 +29,9 @@
 	<Card title="Other projects" primaryBackground="#8e8ffa" secondaryBackground = "#7752fe">
 		<div class="card-content-3" slot="details">
 			Visit my github page...
-			<Github size="24"/>
+			<a href="https://github.com/The-Oracle-AT?tab=repositories" target="_blank">
+				<Github size="24"/>
+			</a>
 		</div>
 	</Card>
 	<Card title="Fourth card" primaryBackground="#810955" secondaryBackground = "#610c63">
