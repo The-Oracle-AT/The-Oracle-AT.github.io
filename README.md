@@ -23,9 +23,9 @@ Instructions for how to install your project. This could include:
 Instructions for how to use your project. This could include:
 
 - ### Potfolio V1
-![Portfolio V1 Screenshots](/svelte-app/public/images/5.JPG)
+![Portfolio V1 Screenshots](/public/images/5.JPG)
 - ### Portfolio V1.1 (this one)
-![Portfolio V1.1 Screenshots](/svelte-app/public//images/pic1.JPG)
+![Portfolio V1.1 Screenshots](portfolio_site/svelte-app/public//images/pic1.JPG)
 ![Portfolio V1.1 Screenshots](/svelte-app/public/images/pic2.JPG)
 
 
