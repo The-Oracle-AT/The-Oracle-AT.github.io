@@ -16,11 +16,9 @@ Instructions for how to install your project. This could include:
     - cd svelte-app
     - npm run dev
     - Go to browser and type: http://localhost:8080
-- npm
+- No other depedencies required
 
 ## Usage
-
-Instructions for how to use your project. This could include:
 
 - ### Potfolio V1
 ![Portfolio V1 Screenshots](/public/images/5.JPG)
@@ -35,4 +33,4 @@ No contribution accepted on this project yet.
 
 ## License
 
-All rights reserved. This project is for personal use only. No part of this project may be copied, modified, or distributed without the express permission of the owner.
+All rights reserved. This project is not licensed and is for personal use only. No part of this project may be copied, modified, or distributed without the express permission of the owner.
