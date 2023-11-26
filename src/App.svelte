@@ -7,12 +7,7 @@
 </script>
 
 <main>
-	<Header>
-		<span slot="other-header-content" class="header-text">
-			<h1>Welcome to my portfolio</h1>
-			<p>Look around and explore the site...</p>
-		</span>
-	</Header>
+	<Header></Header>
 
 	<Body />
 	
@@ -32,12 +27,6 @@
 	}
 
 
-	.header-text {
-		font-size: 1.5em;
-	}
-	.header-text p {
-		font-size: 0.5em;
-		font-weight: normal;
-	}
+
 	
 </style>

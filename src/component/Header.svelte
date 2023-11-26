@@ -1,11 +1,20 @@
 <script>
+    import Typewriter from "./AnimationComponents/Typewriter.svelte";
+
+    const intro = ["Hi, I'm Lapane. \n Welcome to my portfolio!"];
+ 
 </script>
 
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <div class="header-image">
     <img src="images/headerImg.png" alt="header image of personal portfolio" class="headerImg" />
     <div class="vignette"></div>
-    <div class="header-text"><slot name="other-header-content"/></div>
+    <div class="header-text">
+        {#each intro as text}
+            <h1> <Typewriter typedtext={text} /> </h1>
+        {/each}
+        <p>Look around and explore the site...</p>
+    </div>
     
 </div>
 
@@ -39,6 +48,14 @@
         width: 100%;
         padding: 0 1em;
     }
+    .header-text {
+		font-size: 1.5em;
+	}
+	.header-text p {
+		font-size: 0.7em;
+		font-weight: normal;
+        animation: fadeIn 5s ease-in 0s;
+	}
     .vignette {
         position: absolute;
         top: 0;
@@ -48,4 +65,22 @@
         background: radial-gradient(circle at center, transparent, rgb(5, 5, 5) 70%);
         opacity: 0.5;
         }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(200%);
+        }
+        50% {
+            opacity: 0;
+            transform: translateY(200%);
+        }
+        70% {
+            opacity: 0;
+            transform: translateY(200%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
