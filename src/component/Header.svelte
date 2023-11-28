@@ -11,7 +11,7 @@
     <div class="vignette"></div>
     <div class="header-text">
         {#each intro as text}
-            <h1> <Typewriter typedtext={text} /> </h1>
+            <h1 style="font-size: 2.8em;"> <Typewriter typedtext={text} /> </h1>
         {/each}
         <p>Look around and explore the site...</p>
     </div>
@@ -25,6 +25,7 @@
         width: 100%;
         overflow: hidden;
         background-color: black;
+
 
         
     }
@@ -41,7 +42,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 2em;
+        font-size: 8em;
         font-weight: bold;
         color: white;
         text-align: center;

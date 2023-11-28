@@ -12,8 +12,12 @@
 	font-style: normal;
 	font-display: swap;
 }
+html {
+	scroll-behavior: smooth;
 
+}
 html, body {
+	
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -83,7 +87,7 @@ button:focus {
 /* Styling for fade in animation*/
 .hidden {
 	opacity: 0;
-	transform: translateY(50%);
+	transform: translateX(30%);
 	transition: all 1s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -92,7 +96,51 @@ button:focus {
 	}
 }
 .show {
+	position: relative;
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateX(0);
+}
 
+.slide {
+	transform: translate(40%, -70%);
+}
+
+@keyframes drawLine{
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+}
+.container {
+	max-height: 60vh;
+	display: grid;
+	position: relative;
+	z-index:0;
+
+
+}
+.card-elem, .icons {
+	grid-column: 1;
+	grid-row: 1;
+}
+.card-elem {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 209px;
+	max-width: 609px;
+}
+.icons {
+	height: 150px;
+	background-color: transparent;
+	max-width: 600px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	border-radius: 1em;
+	z-index: 2;
 }

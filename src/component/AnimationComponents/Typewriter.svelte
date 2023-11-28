@@ -8,13 +8,16 @@
  */
 	let visible = false;
     export let typedtext = "This is a typewriter component"
+	export let setSpeed = 1;
+	$: currentSpeed = setSpeed;
+	
     import { onMount } from 'svelte';
     onMount(() => {
         visible = true;
     });
 
 
-	function typewriter(node, { speed = 1}) {
+	function typewriter(node, { speed = currentSpeed }) {
 		const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
 
 		if (!valid) {

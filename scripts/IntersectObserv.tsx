@@ -1,13 +1,13 @@
 // Description: Fade in elements when they are visible in the viewport
-function IsElementInView(elementClass: string) {
+function IsElementInView(elementClass: string, suffixToAppend: string) {
     const observer = new IntersectionObserver((entries) => {
         try {
             entries.forEach((entry) => {
                 console.log(entry);
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
+                    entry.target.classList.add(suffixToAppend);
                 } else {
-                    entry.target.classList.remove('show');
+                    entry.target.classList.remove(suffixToAppend);
                 }
             })
         } catch (error) {
