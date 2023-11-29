@@ -84,4 +84,9 @@
             transform: translateY(0);
         }
     }
+    @media only screen and (max-width: 600px){
+        .header-text {
+            font-size: 0.7em;
+        }
+    }
 </style>

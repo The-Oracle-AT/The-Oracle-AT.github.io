@@ -41,7 +41,7 @@
 </script>
 
 {#if visible}
-	<p transition:typewriter style="white-space: pre-line;">
+	<div in:typewriter={{ speed:setSpeed}} style="white-space: pre-line;" class="typewriter">
 		{typedtext}
-	</p>
+	</div>
 {/if}

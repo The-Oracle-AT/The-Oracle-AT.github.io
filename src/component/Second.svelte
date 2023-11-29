@@ -6,48 +6,7 @@
 
 
 <style>
-    .container {
-        height: 60vh;
-        display: grid;
-        position: relative;
-        z-index:0;
 
-
-    }
-    .card-elem, .icons {
-        grid-column: 1;
-        grid-row: 1;
-    }
-    .card-elem {
-        z-index: 1;
-    }
-    .icons {
-        height: 150px;
-        background-color: transparent;
-        max-width: 600px;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -40%);
-        border-radius: 1em;
-        z-index: 2;
-    
-    }
-    span {
-        height: 50px;
-        width: 50px;
-    }
-    svg {
-        opacity: 0;
-    }
-    .icons span:nth-child(1) svg {
-        opacity: 1;
-        transform: translate(354.5px, -16px) rotate(-30deg);
-    }
-    .icons span:nth-child(2) svg {
-        opacity: 1;
-        transform: translate(300px, 163px) rotate(0deg) 
-    }
 
 </style>
 
