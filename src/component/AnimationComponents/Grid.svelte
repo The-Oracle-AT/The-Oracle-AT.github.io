@@ -2,7 +2,11 @@
     import { Projects } from '../../../scripts/Projects.js';
     
 </script>
+
+<div class="outer">
 {#each Projects as project}
+
+<div class="container">
     <div class="wrapper">
         <div class="grid">
             <!-- svelte-ignore a11y-missing-attribute -->
@@ -20,20 +24,58 @@
             <div class="grid-item"><p style="text-decoration: underline;">Tech Stack</p>{project.technologies}</div>
         </div>
     </div>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laborum totam distinctio aliquid aut nostrum, harum beatae molestiae eligendi suscipit impedit odio nulla! Cupiditate deleniti ad sed animi laudantium voluptates.</p>
+    </section>
+</div>
 {/each}
+
+</div>
 
 <style>
     :root {
         --primaryBackground: rgba(14, 15, 19, 0.1);
         --secondaryBackground: rgba(5, 12, 48, 0.2);
     }
-    .wrapper {
+    .outer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
         width: 100dvw;
+
+    }
+    .container {
         height: 100dvh;
         display: flex;
+        flex-direction: row;
+        font-size: small;
+        gap: 1em;
+        left: -50%;
+
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        font-size: medium;
+        transform: translateY(30%);
+    }
+    p {
+        max-width: 400px;
+    }
+   
+
+
+    .wrapper {
+        display: flex;
+        
         justify-content: center;
         align-items: center;
+        font-weight: 600;
+        
     }
+    
     .grid {
         display: grid;
         grid-template-columns: 200px 150px 200px;
@@ -45,6 +87,7 @@
         ;
         gap: 0.1em;
         position: relative;
+        
     }
     .grid-item {
         display: flex;
@@ -60,10 +103,10 @@
         2px 2px 0.2em rgb(116, 136, 250);
         padding: 0.5em;
         text-align: left;
-        transition: transform 0.3s ease-in-out;
+        
         position: relative;
         max-height: 300px;
-        font-size: small;
+        
     }
     .grid-item:nth-child(1) img {
         width: 100%;
@@ -81,7 +124,7 @@
     }
     .grid-item:nth-child(3) {
         grid-area: c;
-        transform: translate(-15px, 10px);
+        transform: translate(-10px, 10px);
     }
     .grid-item:nth-child(4) {
         grid-area: d;
@@ -95,8 +138,16 @@
         transform: translate(-10px, -10px);
     }
     .grid-item:hover {
-        transform: scale(1.2) ;
+        transform: scale(1.01);
         z-index: 1;
+        transition: transform 0.3s ease-in-out;
 
     }
+    .grid-item:nth-child(1):hover{
+        zoom: 100%;
+    }
+    .container:nth-child(even){
+        flex-direction: row-reverse;
+    }
+
 </style>

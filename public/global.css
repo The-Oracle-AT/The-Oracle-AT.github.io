@@ -24,6 +24,7 @@ body {
 	height: 100%;
 	text-align: center;
 	color: white;
+	overflow-x: hidden;
 }
 
 a {
@@ -107,6 +108,6 @@ button:focus {
 .card-body {
 	font-family:'Trirong', serif;
 }
-.grid-item {
+.container {
 	font-family: 'Trirong', serif;
 }

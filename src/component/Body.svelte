@@ -2,9 +2,9 @@
     import { onMount } from 'svelte';
     import StreamLine from './AnimationComponents/StreamLine.svelte';
     import First from './First.svelte';
+    import Fourth from './Fourth.svelte';
     import Second from './Second.svelte';
     import Third from './Third.svelte';
-    import Card from './card.svelte';
 
 
 
@@ -46,12 +46,10 @@
     </section>   
     <section class="hidden">
         <Third/>
-    </section>   
-    <section class="hidden">
-        <Card title="Fourth card" primaryBackground="#810955" secondaryBackground = "#610c63">
-            <div class="card-content" slot="details"></div>
-        </Card>
     </section>
+    <section>
+        <Fourth/>
+    </section>   
 </div>
 
 <style>
