@@ -21,6 +21,7 @@
         padding: 1em;
         max-width: 630px;
         max-height: 260px;
+        min-height: 180px;
         background-color: var(--primaryBackground);
         margin: 1em auto;
         text-align: left;

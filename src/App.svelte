@@ -1,6 +1,7 @@
 
 <script>
 	
+	import Grid from './component/AnimationComponents/Grid.svelte';
 	import Body from './component/Body.svelte';
 	import Footer from './component/Footer.svelte';
 	import Header from './component/Header.svelte';
@@ -10,6 +11,7 @@
 <main>
 	<Header></Header>
 	<Body />
+	<Grid />
 	
 	
 	<Footer>
