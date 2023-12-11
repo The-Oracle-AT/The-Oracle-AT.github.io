@@ -24,7 +24,8 @@
             <div class="grid-item"><p style="text-decoration: underline;">Tech Stack</p>{project.technologies}</div>
         </div>
     </div>
-    <section>
+    <section class="project-details">
+        <h2>{project.name}</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laborum totam distinctio aliquid aut nostrum, harum beatae molestiae eligendi suscipit impedit odio nulla! Cupiditate deleniti ad sed animi laudantium voluptates.</p>
     </section>
 </div>
@@ -41,25 +42,25 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 1em;
+        gap: 8rem;
         width: 100dvw;
 
     }
     .container {
-        height: 100dvh;
         display: flex;
         flex-direction: row;
         font-size: small;
-        gap: 1em;
+        gap: 4rem;
         left: -50%;
 
     }
     section {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         text-align: left;
         font-size: medium;
-        transform: translateY(30%);
+        
     }
     p {
         max-width: 400px;

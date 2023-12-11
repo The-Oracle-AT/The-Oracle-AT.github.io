@@ -109,5 +109,11 @@ button:focus {
 	font-family:'Trirong', serif;
 }
 .container {
+	font-family: 'Trirong';
+}
+.outer .container .project-details h2{
+	font-family: 'Adventure Subtitles', 'Helvetica';
+}
+h1, h2, h3, h4, h5, h6 {
 	font-family: 'Trirong', serif;
 }
