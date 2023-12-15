@@ -2,7 +2,7 @@
     import Hexagons from "./Hexagons.svelte";
 
     const generateRandomHexagons = () => {
-        const numHexagons = Math.round(Math.random() * 7);
+        const numHexagons = Math.round(Math.random() * 50);
         return [...Array(numHexagons)].map(() => ({
             x: window.innerWidth * Math.random(),
             y: window.innerHeight * Math.random(),
@@ -13,7 +13,7 @@
 
     setInterval(() => {
         hexagons = generateRandomHexagons();
-    }, 3000);
+    }, 6000);
 </script>
 
 <div class="wrapper">

@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import HexagonGrid from './AnimationComponents/HexagonGrid.svelte';
     import StreamLine from './AnimationComponents/StreamLine.svelte';
     import First from './First.svelte';
     import Fourth from './Fourth.svelte';
@@ -30,35 +31,61 @@
 
 </script>
 <div class="main">
+    <div class="backGround">
+        <HexagonGrid/>
+    </div>
+    <div class="foreground">
+        <section class="hidden">
+            <First/>
+        </section>
 
-    <section class="hidden">
-        <First/>
-         
-    </section>
-    <section class="hidden">
-        <Second/>
-    </section>
-    <section class="hidden">
-        <div class="divider-text">
-            <div><StreamLine/></div>
-            <p>Feel free to reach out for collaboration, discussions, or just to say hello!</p>
-        </div>
-    </section>   
-    <section class="hidden">
-        <Third/>
-    </section>
-    <section>
-        <Fourth/>
-    </section>   
+        <section class="hidden">
+            <Second/>
+        </section>
+
+        <section class="hidden">
+            <div class="divider-text">
+                <div><StreamLine/></div>
+                <p>Feel free to reach out for collaboration, discussions, or just to say hello!</p>
+            </div>
+        </section>
+
+        <section class="hidden">
+            <Third/>
+        </section>
+
+        <section>
+            <Fourth/>
+        </section>
+    </div>
+   
 </div>
 
 <style>
-    .main{
+       .main{
+        position: relative;
+        width:100%;
+        height: 100%;
+
+    }
+    .foreground{
         display: grid;
         grid-template-columns: 1fr;
         gap: 10vh;
         width:100%;
         height: 100%;
+        z-index: 20;
+        background-color: transparent;
+    }
+    .backGround{
+        position: fixed;
+        top: 0; /* Added these to ensure .backGround covers the entire viewport */
+        left: 0;
+        width:100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        filter: blur(10px);
     }
     .hidden {
         display: flex;
