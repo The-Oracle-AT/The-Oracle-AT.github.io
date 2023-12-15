@@ -115,5 +115,11 @@ button:focus {
 	font-family: 'Adventure Subtitles', 'Helvetica';
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Trirong', serif;
+	font-family: 'Adventure Subtitles', 'Helvetica';
+}
+.card-header {
+	font-family: 'Adventure Subtitles', 'Helvetica';
+}
+.header-text {
+	font-family: 'Adventure Subtitles', 'Helvetica';
 }

@@ -45,7 +45,7 @@
         font-size: 8em;
         font-weight: bold;
         color: white;
-        text-align: center;
+        text-align: left;
         width: 100%;
         padding: 0 1em;
     }

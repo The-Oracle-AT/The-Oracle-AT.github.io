@@ -16,7 +16,9 @@
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.1.2",
-    "svelte": "^4.2.7"
+    "sass": "^1.69.5",
+    "svelte": "^4.2.7",
+    "svelte-preprocess": "^5.1.2"
   },
   "dependencies": {
     "sirv-cli": "^2.0.0"

@@ -1,8 +1,9 @@
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess';
 
 
 const config = {
-	preprocess: vitePreprocess()
+	preprocess: vitePreprocess(), sveltePreprocess
 };
 
 
