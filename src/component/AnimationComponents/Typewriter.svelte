@@ -1,4 +1,4 @@
-
+ 
 <script>
 	/**
  * This component represents a typewriter animation.
