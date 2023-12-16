@@ -14,9 +14,10 @@
 }
 html {
 	scroll-behavior: smooth;
+	--backgroundColor: rgb(10, 4, 30);
 }
 html, body {
-	background-color: black;
+	background-color: var(--backgroundColor);
 	font-family: 'Adventure Subtitles', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body {

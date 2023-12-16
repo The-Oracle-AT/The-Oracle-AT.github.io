@@ -76,15 +76,16 @@
         align-items: center;
         height: 100vh;
         width: 100%;
-        background: #000;
+        background: transparent;
     }
     .inner-carousel {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 80%;
         width: 100%;
-        background: #000;
+        background: transparent;
+
     }
 
 

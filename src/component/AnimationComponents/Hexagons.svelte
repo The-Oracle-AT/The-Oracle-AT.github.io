@@ -147,8 +147,8 @@
 	svg {
 		display: block;
 		background-color: transparent;
-		width: var(--boxWidth);
-		height: var(--boxHeight);
+		width: 100%;
+		height: 100%;
 		transform: perspective(1000px) rotateX(0deg);
 		margin-top: -1em;
 

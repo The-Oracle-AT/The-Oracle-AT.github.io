@@ -1,27 +1,19 @@
 <script>
     import Hexagons from "./Hexagons.svelte";
 
-    const generateRandomHexagons = () => {
-        const numHexagons = Math.round(Math.random() * 50);
-        return [...Array(numHexagons)].map(() => ({
-            x: window.innerWidth * Math.random(),
-            y: window.innerHeight * Math.random(),
-        }));
-    };
 
-    let hexagons = generateRandomHexagons();
+    
 
-    setInterval(() => {
-        hexagons = generateRandomHexagons();
-    }, 6000);
+
 </script>
 
 <div class="wrapper">
-    {#each hexagons as { x, y }}
-        <div style="position: absolute; left: {x}px; top: {y}px;">
-            <Hexagons />
-        </div>
-    {/each}
+    <div class="hexa"><Hexagons /></div>
+    <div class="hexa"><Hexagons /></div>
+    <div class="hexa"><Hexagons /></div>
+
+
+
 </div>
 
 <style>
@@ -30,4 +22,15 @@
         width: 100%;
         height: 100%;
     }
+    .wrapper > * {
+        width: 30svw;
+        height: 30svw;
+    }
+    .hexa:nth-child(1){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
 </style>

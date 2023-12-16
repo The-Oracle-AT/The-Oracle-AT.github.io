@@ -11,7 +11,7 @@
     <div class="vignette"></div>
     <div class="header-text">
         {#each intro as text}
-            <h1 style="font-size: 2.8em;"> <Typewriter typedtext={text} /> </h1>
+            <h1 style="font-size: 2em;"> <Typewriter typedtext={text} /> </h1>
         {/each}
         <p>Look around and explore the site...</p>
     </div>
@@ -23,19 +23,17 @@
     .header-image {
         position: relative;
         width: 100%;
-        overflow: hidden;
-        background-color: black;
-
-
-        
+        height: 100svh;
+        overflow: clip;
     }
     .headerImg {
-        max-width: 80vw;
+        max-width: 50%;
         height: 100%;
+        transform: translateX(50%);
+        
         object-fit: cover;
-        object-position: center;
+        object-position: right;
         filter: brightness(0.8);
-        border-radius: 50%;
     }
     .header-text {
         position: absolute;
@@ -57,15 +55,7 @@
 		font-weight: normal;
         animation: fadeIn 5s ease-in 0s;
 	}
-    .vignette {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, transparent, rgb(5, 5, 5) 70%);
-        opacity: 0.5;
-        }
+
     @keyframes fadeIn {
         0% {
             opacity: 0;

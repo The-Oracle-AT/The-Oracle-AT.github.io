@@ -1,7 +1,11 @@
 <script>
-    import { onMount } from 'svelte';
-    import HexagonGrid from './AnimationComponents/HexagonGrid.svelte';
-    import StreamLine from './AnimationComponents/StreamLine.svelte';
+    import * as THREE from 'three';
+    import NET from 'vanta/dist/vanta.net.min.js';
+
+    let vantaEffect;
+    let node;
+
+    import { onDestroy, onMount } from 'svelte';
     import First from './First.svelte';
     import Fourth from './Fourth.svelte';
     import Second from './Second.svelte';
@@ -27,13 +31,30 @@
         });
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((element) => {observer.observe(element);});
+
+        //Adding the background animation
+        vantaEffect = NET({
+            el: node,
+            THREE: THREE,
+            mouseControls: true,
+            toucchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x20dca,
+            backgroundColor: 0xe0022
+        });
+    });
+
+    onDestroy(() => {
+        if (vantaEffect) vantaEffect.destroy();
     });
 
 </script>
-<div class="main">
-    <div class="backGround">
-        <HexagonGrid/>
-    </div>
+<div class="main" bind:this={node}>
+
     <div class="foreground">
         <section class="hidden">
             <First/>
@@ -41,13 +62,6 @@
 
         <section class="hidden">
             <Second/>
-        </section>
-
-        <section class="hidden">
-            <div class="divider-text">
-                <div><StreamLine/></div>
-                <p>Feel free to reach out for collaboration, discussions, or just to say hello!</p>
-            </div>
         </section>
 
         <section class="hidden">
@@ -74,29 +88,15 @@
         gap: 10vh;
         width:100%;
         height: 100%;
-        z-index: 20;
+
         background-color: transparent;
-    }
-    .backGround{
-        position: fixed;
-        top: 0; /* Added these to ensure .backGround covers the entire viewport */
-        left: 0;
-        width:100%;
-        height: 100%;
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.1);
-        filter: blur(10px);
     }
     .hidden {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .hidden:nth-child(3) .divider-text{
-        font-size: 200%;
-        text-align: left;
-        max-width: 480px;
+        background-color: transparent;
     }
     @media only screen and (max-width: 800px) {
     .main section {

@@ -27,5 +27,8 @@
      
 </div>
 <style>
+    .container {
+        background-color: transparent;
+    }
 
 </style>
