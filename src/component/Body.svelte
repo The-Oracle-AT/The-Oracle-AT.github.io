@@ -85,11 +85,15 @@
     .foreground{
         display: grid;
         grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
         gap: 10vh;
         width:100%;
         height: 100%;
 
         background-color: transparent;
+    }
+    section:nth-child(1){
+        padding-top: 6rem;
     }
     .hidden {
         display: flex;
